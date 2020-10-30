@@ -30,13 +30,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+A stateful class component is first created by extending the React.Component class. Stateful class components typically contain a costructor, in which super() is called and data is set up using state. From there, data is rendered out to the DOM via the JSX render() method, which is required in all stateful class components.
+
 2. Describe the different phases of the component lifecycle.
+
+There are three phases of the component lifestyle. The first is the mounting phase, in which the component is being built from the ground up. This is where the both render() and componentDidMount are called. Second is the growth phase, in which component data is being updated. This includes setState and shouldComponentUpdate. Third and last is the un-mounting phase, where the component is removed from the screen. This includes componentWillUnmount. 
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+First is componentDidMount, which gets called during the mounting phase, and is called as soon as the render method is called for the first time. setState can be called here, and the compnent will be re-rendered. Second is shouldComponentUpdate, called during the growth phase, which can be used to stop a component from calling render if necessary. Third is componentWillUnmount, called during the un-mounting phase, and is used for any clean up.
+
 4. Define stateful logic.
 
+Stateful logic is logic that is built into a component. It is any code that uses and/or manipulates state. Stateful logic can be a function that sets toggle state, handles a click event, formats data, etc.
+
 5. Describe how to test a React component with React Testing Library.
+
+React Testing Library, like other forms of testing, follows the framework of Arrange, Act, Assert. However, the first step is to import react-testing-library. For Arrange, the render method is called in order to render a React element into a virtual DOM. For Act, an element can be chosen and assigned to an value. For Assert, we need to make sure that the value from the previous step is indeed being rendered.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
